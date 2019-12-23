@@ -7,6 +7,7 @@ const user_signup= require('./auth/user_signup')
 const merc_signup= require('./auth/merc_signup')
 const login= require('./auth/login')
 const user= require('./routes/user')
+const cont= require('./routes/cont')
 
 mongoose.connect("mongodb+srv://gabbar329:municipality@cluster0-718ce.mongodb.net/user?retryWrites=true&w=majority");
 
@@ -32,6 +33,7 @@ app.use('/usersignup',user_signup)
 app.use('/mercsignup',merc_signup)
 app.use('/login',login)
 app.use('/user',user)
+app.use('/cont',cont)
 
 
 

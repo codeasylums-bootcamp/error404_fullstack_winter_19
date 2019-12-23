@@ -8,6 +8,8 @@ const mercSchema= mongoose.Schema(
         password:{type:String,required:true},
         phno:{type:Number,required:true},
         type:String,
+        city:{type:String,required:true},
+        price:{type:Number,required:true},
         domain:{type:String,required:true}
 
         

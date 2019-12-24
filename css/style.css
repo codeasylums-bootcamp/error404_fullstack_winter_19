@@ -186,8 +186,10 @@ h2 {
   font-size: 36px; }
 
 .main {
-  background: #f8f8f8;
-  padding: 40px 5px 10px 5px; }
+  background: #3bbdf0;
+  padding:20px 20px 20px 20px;
+
+ }
 
 .clear {
   clear: both; }
@@ -250,13 +252,13 @@ body {
   -ms-transform: translate(-50%, -50%); }
 
 .signup {
-  margin-bottom: 150px; }
+  margin-bottom: 20px; }
 
 .signup-content {
-  padding: 75px 0; }
+  padding: 100px 0; }
 
 .signup-form, .signup-image, .signin-form, .signin-image {
-  width: 50%;
+  width: 70%;
   overflow: hidden; }
 
 .signup-image {
@@ -303,9 +305,9 @@ figure {
   color: #222; }
 
 .signup-form {
-  margin-left: 75px;
-  margin-right: 75px;
-  padding-left: 34px; }
+  margin-left: 55px;
+  margin-right: 55px;
+  padding-left: 15px; }
 
 .register-form {
   width: 100%; }

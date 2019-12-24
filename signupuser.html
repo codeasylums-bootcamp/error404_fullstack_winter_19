@@ -18,11 +18,15 @@
     <div class="main">
         <!-- Sign up form -->
         <section class="signup">
-            <div class="container">
+            <div class="container" style="text-emphasis: 5px">
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
+<<<<<<< HEAD
                         <form method="POST" class="register-form" id="register-form" action="http://localhost:4000/usersignup">
+=======
+                        <form method="POST" class="register-form" id="register-form" style="font-size:20px">
+>>>>>>> 290f1586f7dac12e4970eba167fa225617b46578
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -36,8 +40,20 @@
                                 <input type="password" name="pass" id="pass" placeholder="Password"/>
                             </div>
                             <div class="form-group">
-                                <label for="city"><i class="zmdi zmdi-pin-drop"></i></label>
-                                <input type="text" name="city" id="city" placeholder="Your City"/>
+                                <!-- <label for="addr"><i class="zmdi zmdi-pin-drop"></i></label>
+                                <input type="text" name="city" id="city" placeholder="Your City"/> -->
+                                <div class="select-service" style="width:200px;padding:2px">
+                                    <i class="zmdi zmdi-home zmdi-hc-fw"></i>
+                                    <select id="city" name="city" class="select-dropdown bg-transparent">
+                                        <option disabled="disabled" selected="selected"><span>Your City</span></option>
+                                        <option>Delhi</option>
+                                        <option>Chennai</option>
+                                        <option>Kolkata</option>
+                                        <option>Bangalore</option>
+                                        <option>Mumbai</option>
+                                    </select>
+                                    <!-- <div class="select-dropdown"></div> -->
+                                </div>
                             </div>
                             
                             <div class="form-group form-button">
@@ -47,7 +63,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="file:///home/reema/Desktop/its_urgent/error404_fullstack_winter_19/signupmerchant.html" class="signup-image-link">If you are a Merchant Click here</a>
+                        <a href="file:///home/reema/Desktop/its_urgent/error404_fullstack_winter_19/login.html" class="signup-image-link" style="font-size:20px">If you are already a memeber</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const port =4000
+const port =3000
 const parser = require('body-parser');
 
 const user_signup= require('./auth/user_signup')

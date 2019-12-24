@@ -22,7 +22,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form" action="http://localhost:3000/mercsignup">
+                        
                         
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -38,11 +38,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="tel"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="tel" name="number"maxlength="10" placeholder="Your Number">
+                                <input type="tel" name="number"maxlength="10" id="number" placeholder="Your Number">
                             </div>
                             <div class="form-group">
                                 <label for="price"><i class="zmdi zmdi-money"></i></label>
-                                <input type="number" name="price" min="1" max="5000" placeholder="Quantity (between 1 and 5000):">
+                                <input type="number" name="price" id="price" min="1" max="5000" placeholder="Quantity (between 1 and 5000):">
                             </div>
                             
                             <div class="form-group">
@@ -77,9 +77,9 @@
                                 </div>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Submit" />
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Submit" onclick="f()" />
                             </div>
-                        </form>
+                        
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
@@ -90,41 +90,40 @@
         </section>
     </div>
     <!-- JS -->
-    <script src="jquery/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
     <script>
+      
+      function f() { 
+        var email=document.getElementById('email').value
+        var pass=document.getElementById('pass').value
+        var name=document.getElementById('name').value
+        var city=document.getElementById('city').value
+        var number=document.getElementById('number').value
+        var domain=document.getElementById('domain').value
+        var price=document.getElementById('price').value
         
-    //     var name=document.getElementById('name')
-    //     var email=document.getElementById('email')
-    //     var pass=document.getElementById('pass')
-    //     var tel=document.getElementById('telephone')
-    //     var price=document.getElementById('price')
-    //     var domain=document.getElementById('domain')
-
-
-    //     const url = 'http://localhost:3000/mercsignup';
-    //     const data = {  name: name,
-    //                     email:email,
-    //                     pass:pass,
-    //                     number:tel,
-    //                     price:price,
-    //                     domain:domain
-    //                  };
-
-    //     try {
-    //         const response = await fetch(url, {
-    //         method: 'POST', // or 'PUT'
-    //         body: JSON.stringify(data), // data can be `string` or {object}!
-    //         headers: {
-    //         'Content-Type': 'application/json'
-    //         }
-    //         });
-    // const json = await response.json();
-    // console.log('Success:', JSON.stringify(json));
-    // } catch (error) {
-    // console.error('Error:', error);
-    // }
-
-
+        
+        axios.post('http://localhost:3000/mercsignup', {
+        email: email,
+        pass: pass,
+        name:name,
+        city:city,
+        number:number,
+        domain:domain,
+        price:price
+        })
+    .then(response=> {
+        //console.log(response)
+        if(response.data=="done")
+            window.location.href = './web/index.html';
+        else
+            window.location.href = './signupmerchant.html';
+        
+    })
+    .catch(function (error) {
+        console.log(error);
+    });}
+   
     </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const us= require('../models/user_Schema')
+const login=require('../auth/login')
 
 router.post('/',(req,res)=>
 {
@@ -20,9 +21,10 @@ router.post('/',(req,res)=>
     .exec()
     .then(user=>{
         if(user.length>0)
-            res.send("This Email is taken. Try with a new one")
+            {console.log("Email Taken")
+            res.send("This Email is taken. Try with a new one")}
         else
-            {newuser.save();res.send('Welcome');}
+            {newuser.save();console.log("Signup Done");res.send("done").status(200)}
     })
 
 

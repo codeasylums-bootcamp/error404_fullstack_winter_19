@@ -22,9 +22,9 @@ router.post('/',(req,res)=>
     .exec()
     .then(user=>{
         if(user.length>0)
-            res.send("This Email is taken. Try with a new one")
+            {server.log("mercdone");res.send("This Email is taken. Try with a new one");}
         else
-            {newuser.save();res.send('Welcome');}
+            {newuser.save();res.send('done').status(200);}
     })
 
 

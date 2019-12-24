@@ -9,7 +9,7 @@ router.post('/',(req,res)=>
     if(req.body.type==="merc")
         var db = ms
     else
-        var db=us
+        var db = us
 
     db.find({email:req.body.email})
     .exec()
@@ -18,7 +18,7 @@ router.post('/',(req,res)=>
             {
                 if(user[0].password===req.body.password)
                     if(user[0].type===req.body.type)
-                        res.send("Loggedin")
+                        res.send("Loggedin").status(200)
                     else
                         res.send("Wrong user type")
                 else

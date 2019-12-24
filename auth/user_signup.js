@@ -10,7 +10,7 @@ router.post('/',(req,res)=>
             name:req.body.name,
             email:req.body.email,
             password:req.body.pass,
-            phno:req.body.number,
+            //phno:req.body.number,
             city:req.body.city,
             type:"user" 
         }

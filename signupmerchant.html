@@ -23,7 +23,7 @@
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
                         <form method="POST" class="register-form" id="register-form" action="http://localhost:3000/mercsignup">
-                        <form method="POST" class="register-form" id="register-form" style="font-size:20px">
+                        
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -38,25 +38,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="tel"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="tel" name="telephone"maxlength="10" placeholder="Your Number">
+                                <input type="tel" name="number"maxlength="10" placeholder="Your Number">
                             </div>
                             <div class="form-group">
                                 <label for="price"><i class="zmdi zmdi-money"></i></label>
                                 <input type="number" name="price" min="1" max="5000" placeholder="Quantity (between 1 and 5000):">
-                                <input type="number" name="price" min="1" max="5000" placeholder="Price">
                             </div>
                             
                             <div class="form-group">
-                                <label for="tel"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="tel" name="number" maxlength="10" placeholder="Your Number">
-                            </div>
-                            <div class="form-group">
-                                <div class="select-service" style="width:200px;padding:2px">
-                                    <select id="domain" name="domain">
-                                        <option disabled="disabled" selected="selected"><span>Select Service</span></option>
+                                
                                 <div class="select-service" style="width:200px">
                                     <i class="zmdi zmdi-menu"></i>
-                                    <select id="domain" name="class" class="select-dropdown bg-transparent"style="padding:5px">
+                                    <select id="domain" name="domain" class="select-dropdown bg-transparent"style="padding:5px">
                                         <option disabled="disabled" selected="selected"><span>Choose Service</span></option>
                                         <option>Carpenter</option>
                                         <option>Plumber</option>
@@ -67,7 +60,7 @@
                                         <option>Exterior</option>
                                         <option>Interior</option>
                                     </select>
-                                    <!-- <div class="select-dropdown"></div> -->
+                                   
                                 </div>
                             </div>
                             <div class="form-group">
@@ -81,7 +74,6 @@
                                         <option>Bangalore</option>
                                         <option>Mumbai</option>
                                     </select>
-                                    <!-- <div class="select-dropdown"></div> -->
                                 </div>
                             </div>
                             <div class="form-group form-button">
@@ -91,7 +83,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="file:///home/reema/Desktop/its_urgent/error404_fullstack_winter_19/login.html" class="signup-image-link" style="font-size:20px">If you are already a member</a>
+                        <a href="file:///home/rishav/Desktop/codeasy2/projects/its_urgent/error404_fullstack_winter_19/login.html" class="signup-image-link" style="font-size:20px">If you are already a member</a>
                     </div>
                 </div>
             </div>
@@ -99,5 +91,40 @@
     </div>
     <!-- JS -->
     <script src="jquery/jquery.min.js"></script>
+    <script>
+        
+    //     var name=document.getElementById('name')
+    //     var email=document.getElementById('email')
+    //     var pass=document.getElementById('pass')
+    //     var tel=document.getElementById('telephone')
+    //     var price=document.getElementById('price')
+    //     var domain=document.getElementById('domain')
+
+
+    //     const url = 'http://localhost:3000/mercsignup';
+    //     const data = {  name: name,
+    //                     email:email,
+    //                     pass:pass,
+    //                     number:tel,
+    //                     price:price,
+    //                     domain:domain
+    //                  };
+
+    //     try {
+    //         const response = await fetch(url, {
+    //         method: 'POST', // or 'PUT'
+    //         body: JSON.stringify(data), // data can be `string` or {object}!
+    //         headers: {
+    //         'Content-Type': 'application/json'
+    //         }
+    //         });
+    // const json = await response.json();
+    // console.log('Success:', JSON.stringify(json));
+    // } catch (error) {
+    // console.error('Error:', error);
+    // }
+
+
+    </script>
 </body>
 </html>

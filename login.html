@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
     <div class="main">
-        <section class="signup">               
+        <section class="signup">    
+            <center><div id="info"></div></center>           
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-form">
@@ -58,26 +60,16 @@
         if(response.data=="Loggedin")
             window.location.href = './web/index.html';
         else
-            window.location.href = './login.html';
+            {
+                document.getElementById('info').innerHTML="Wrong Credentials";
+                //window.location.href = './login.html';
+            }
         
     })
     .catch(function (error) {
         console.log(error);
     });
-    // axios({
-    //     method: "post",
-    //     url: "http://localhost:3000/login",
-    //     data: {
-    //     email: "manya@abc.com",
-    //     password: "manya",
-    //     type:"user"
-    //     }
-    // }).then(function (response) {
-    // console.log("done");
-    // })
-    //     .catch(function (error) {
-    //     console.log("no");
-    // });
+    
 
 }
     </script>

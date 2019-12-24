@@ -21,8 +21,7 @@ router.post('/',(req,res)=>
     .exec()
     .then(user=>{
         if(user.length>0)
-            {console.log("Email Taken")
-            res.send("This Email is taken. Try with a new one")}
+            {res.send("This Email is taken. If already registered go to login.")}
         else
             {newuser.save();console.log("Signup Done");res.send("done").status(200)}
     })

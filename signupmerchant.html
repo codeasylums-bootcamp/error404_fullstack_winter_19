@@ -18,6 +18,7 @@
     <div class="main">
         <!-- Sign up form -->
         <section class="signup">
+            <center><div id="info"></div></center>
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
@@ -117,8 +118,8 @@
         if(response.data=="done")
             window.location.href = './web/index.html';
         else
-            window.location.href = './signupmerchant.html';
-        
+          document.getElementById('info').innerHTML=response.data
+               
     })
     .catch(function (error) {
         console.log(error);

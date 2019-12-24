@@ -12,7 +12,7 @@ router.post('/',(req,res)=>
             {   c="";
                 for(i=0;i<user.length;i++)
                     {if(user[i].price<=req.body.price)
-                        c+=user[i]
+                        c+=JSON.stringify(user[i])
                     }
                 res.send(c)
 

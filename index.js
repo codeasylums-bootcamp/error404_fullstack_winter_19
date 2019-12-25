@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const port =3000
+const port =4000
 const parser = require('body-parser');
 
 const user_signup= require('./auth/user_signup')
@@ -9,7 +9,7 @@ const login= require('./auth/login')
 const user= require('./routes/user')
 const cont= require('./routes/cont')
 
-mongoose.connect("mongodb+srv://gabbar329:municipality@cluster0-718ce.mongodb.net/user?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://gabbar329:mongodb@cluster0-718ce.mongodb.net/user?retryWrites=true&w=majority");
 
 
 const app = express();

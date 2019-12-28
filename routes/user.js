@@ -19,7 +19,7 @@ router.post('/',(req,res)=>
 
             }
         else
-            res.send("no one is there to help you")
+            {res.send("none")}
     })
 
 

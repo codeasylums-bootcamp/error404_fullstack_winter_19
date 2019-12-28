@@ -306,22 +306,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         price:price
         })
     .then(response=> {
-			// var points = response.data;
-			// points.sort(function(a, b){
-			// 	a=a.price
-				
-			// 	return a-b
-			// });	
-
-			for(i=0;i<response.data.length;i++)
+			
+			//console.log(response)
+			if(response.data!=="none")
+			{	document.getElementById("elem").innerHTML="";
+				for(i=0;i<response.data.length;i++)
          		{
 					s=(response.data[i]).split(':')
-
 					var node = document.createElement("LI");                 // Create a <li> node
 					var textnode = document.createTextNode("Name : "+s[0]+" Number:"+s[1]+" Price: "+s[2]);         // Create a text node
 					node.appendChild(textnode);                              // Append the text to <li>
 					document.getElementById("elem").appendChild(node); 
-				}	
+				}}
+			else
+			 {	document.getElementById("elem").innerHTML="";
+				var node = document.createElement("LI");                 // Create a <li> node
+				var textnode = document.createTextNode("Sorry we are not here yet.");         // Create a text node
+				node.appendChild(textnode);                              // Append the text to <li>
+				document.getElementById("elem").appendChild(node);
+			 }
+
     })
     .catch(function (error) {
         console.log(error);

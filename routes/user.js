@@ -9,10 +9,11 @@ router.post('/',(req,res)=>
     .exec()
     .then(user=>{
         if(user.length>0)
-            {   c="";
+            {   c=[];
                 for(i=0;i<user.length;i++)
                     {if(user[i].price<=req.body.price)
-                        c+=JSON.stringify(user[i])
+                       //c[i]=user[i]
+                        c[i]=(user[i].name+":"+user[i].phno+":" + user[i].price )
                     }
                 res.send(c)
 

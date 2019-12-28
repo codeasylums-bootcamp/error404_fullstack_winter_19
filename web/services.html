@@ -1,15 +1,10 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
 <title>Fast Service a Home Service Category Bootstrap Responsive Website Template | Services :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+<link rel="icon" href="./images/img.jpeg">
 <meta name="keywords" content="Fast Service a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -189,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 
   <div>
-	<h1 id="data" style="text-align:center;"></h1>
+	<h1 id="elem" style="text-align:center;"></h1>
 </div>
 <div class="stations" style="color: white; border-radius: 10px; margin: 0 10px;">
 	
@@ -305,17 +300,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         var price=document.getElementById('price').value
         
         
-        axios.post('http://localhost:3000/user', {
+        axios.post('http://localhost:4000/user', {
         city:city,
         domain:domain,
         price:price
         })
     .then(response=> {
-			//console.log(JSON.stringify(response.data[0]))
-			//console.log(response.data)
-			//console.log((response.data).getJSONARRAY)
-         	//document.getElementById('data').innerHTML+=response.data.phno
-               
+			// var points = response.data;
+			// points.sort(function(a, b){
+			// 	a=a.price
+				
+			// 	return a-b
+			// });	
+
+			for(i=0;i<response.data.length;i++)
+         		{
+					s=(response.data[i]).split(':')
+
+					var node = document.createElement("LI");                 // Create a <li> node
+					var textnode = document.createTextNode("Name : "+s[0]+" Number:"+s[1]+" Price: "+s[2]);         // Create a text node
+					node.appendChild(textnode);                              // Append the text to <li>
+					document.getElementById("elem").appendChild(node); 
+				}	
     })
     .catch(function (error) {
         console.log(error);
